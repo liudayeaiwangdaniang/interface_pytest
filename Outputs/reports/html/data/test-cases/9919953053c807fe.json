@@ -1,0 +1,309 @@
+{
+  "uid" : "9919953053c807fe",
+  "name" : "test_register_ok[case1]",
+  "fullName" : "TestCases.test_register.TestRegister#test_register_ok",
+  "historyId" : "12cf2168d3a3ccfa3a271b50c0792fe1",
+  "time" : {
+    "start" : 1651331483736,
+    "stop" : 1651331484138,
+    "duration" : 402
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+  "statusTrace" : "self = <TestCases.test_register.TestRegister object at 0x000001B0E6165C18>\ncase = {'check_sql': 'select * from member where mobile_phone=\"13715015646\"', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'id': 2, 'method': 'post', ...}\ndb = <Common.handle_db.HandleDB object at 0x000001B0E6126C50>\n\n    @pytest.mark.parametrize(\"case\",cases)\n    def test_register_ok(self,case,db):\n        logger.info(\"执行用例{}：{}\".format(case[\"id\"],case[\"title\"]))\n    \n    # 替换 - 动态\n        # request_data里的 #phone# 替换成 new_phone\n        # check_sql里的 #phone# 替换成 new_phone\n        if case[\"request_data\"].find(\"#phone#\") != -1: # != -1 说明能找到下标\n            new_phone = get_new_phone()\n            case = replace_mark_with_data(case,\"#phone#\",new_phone)\n    \n    # 步骤 测试数据-发起请求\n        response = send_requsets(case[\"method\"],case[\"url\"],case[\"request_data\"])\n    \n    # 期望结果，从字符串转换为字典\n        expected = eval(case[\"expected\"])\n    \n    # 断言 -code == 0  msg == ok\n        logger.info(\"用例的期望结果为：{}\".format(case[\"expected\"]))\n        try:\n            assert response.json()[\"code\"] == expected[\"code\"]\n>           assert response.json()[\"msg\"] == expected[\"msg\"]\nE           AssertionError: assert 'OK' == '密码为空'\nE             - 密码为空\nE             + OK\n\nTestCases\\test_register.py:57: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "db",
+    "time" : {
+      "start" : 1651331482995,
+      "stop" : 1651331483204,
+      "duration" : 209
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_mark",
+    "time" : {
+      "start" : 1651331483204,
+      "stop" : 1651331483204,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651331484663,
+      "stop" : 1651331484663,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_mark::0",
+    "time" : {
+      "start" : 1651331484659,
+      "stop" : 1651331484660,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_mark')"
+  }, {
+    "name" : "tag",
+    "value" : "P0"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_register"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegister"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "11348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "9f5aa1689f9f01fd",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651330267047,
+        "stop" : 1651330267523,
+        "duration" : 476
+      }
+    }, {
+      "uid" : "c8882b0aad83b75c",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651328991259,
+        "stop" : 1651328991729,
+        "duration" : 470
+      }
+    }, {
+      "uid" : "a322e9a456d8d5f2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651328935737,
+        "stop" : 1651328936174,
+        "duration" : 437
+      }
+    }, {
+      "uid" : "dbbaaf7562f1d6cf",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "time" : {
+        "start" : 1651327500433,
+        "stop" : 1651327500520,
+        "duration" : 87
+      }
+    }, {
+      "uid" : "ce5bc32fa868e368",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "time" : {
+        "start" : 1651327495275,
+        "stop" : 1651327495390,
+        "duration" : 115
+      }
+    }, {
+      "uid" : "ff6fe902d56ee3c4",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651327489874,
+        "stop" : 1651327490182,
+        "duration" : 308
+      }
+    }, {
+      "uid" : "529d775e69d5bdce",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "time" : {
+        "start" : 1651327375555,
+        "stop" : 1651327375659,
+        "duration" : 104
+      }
+    }, {
+      "uid" : "d14239e603b03ae7",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "time" : {
+        "start" : 1651327370412,
+        "stop" : 1651327370521,
+        "duration" : 109
+      }
+    }, {
+      "uid" : "de77ab069b0ee89d",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651327365071,
+        "stop" : 1651327365346,
+        "duration" : 275
+      }
+    }, {
+      "uid" : "20e75c7829e4679a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "time" : {
+        "start" : 1651325747425,
+        "stop" : 1651325747617,
+        "duration" : 192
+      }
+    }, {
+      "uid" : "b8ee8cda8586faee",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "time" : {
+        "start" : 1651325742109,
+        "stop" : 1651325742390,
+        "duration" : 281
+      }
+    }, {
+      "uid" : "ce9c3543d6c696c2",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651325736741,
+        "stop" : 1651325737021,
+        "duration" : 280
+      }
+    }, {
+      "uid" : "c541a989c763dc83",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+      "time" : {
+        "start" : 1651316274317,
+        "stop" : 1651316274592,
+        "duration" : 275
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "70ef4f17ce9f273c",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/6/allure/#testresult/70ef4f17ce9f273c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+        "time" : {
+          "start" : 1651331483736,
+          "stop" : 1651331484138,
+          "duration" : 402
+        }
+      }, {
+        "uid" : "1dd27b522dcde35c",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/5/allure/#testresult/1dd27b522dcde35c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+        "time" : {
+          "start" : 1651330267047,
+          "stop" : 1651330267523,
+          "duration" : 476
+        }
+      }, {
+        "uid" : "8774328bfb7288e9",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/4/allure/#testresult/8774328bfb7288e9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+        "time" : {
+          "start" : 1651328991259,
+          "stop" : 1651328991729,
+          "duration" : 470
+        }
+      }, {
+        "uid" : "fccaadc2b9872ace",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/3/allure/#testresult/fccaadc2b9872ace",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+        "time" : {
+          "start" : 1651328935737,
+          "stop" : 1651328936174,
+          "duration" : 437
+        }
+      }, {
+        "uid" : "fb8a4d08b3e763bd",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/1/allure/#testresult/fb8a4d08b3e763bd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+        "time" : {
+          "start" : 1651327375555,
+          "stop" : 1651327375659,
+          "duration" : 104
+        }
+      } ]
+    },
+    "tags" : [ "P0", "@pytest.mark.usefixtures('start_mark')" ]
+  },
+  "source" : "9919953053c807fe.json",
+  "parameterValues" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+}

@@ -1,0 +1,169 @@
+{
+  "uid" : "f36f001bfad0b7ee",
+  "name" : "test_recharge[case2]",
+  "fullName" : "TestCases.test_recharge.TestRecharge#test_recharge",
+  "historyId" : "626a6e17d526055844280a0c29f49e74",
+  "time" : {
+    "start" : 1651327489138,
+    "stop" : 1651327489390,
+    "duration" : 252
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "use_login",
+    "time" : {
+      "start" : 1651327488412,
+      "stop" : 1651327488594,
+      "duration" : 182
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1651327487927,
+      "stop" : 1651327488083,
+      "duration" : 156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "use_login::0",
+    "time" : {
+      "start" : 1651327489511,
+      "stop" : 1651327489511,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651327511692,
+      "stop" : 1651327511692,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('use_login')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_recharge"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRecharge"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "13256-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_recharge"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 3, 'interface': 'recharge', 'title': '充值成功-2位小数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600.22}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "6ff243659bc24ae4",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/6/allure/#testresult/6ff243659bc24ae4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489138,
+          "stop" : 1651327489390,
+          "duration" : 252
+        }
+      }, {
+        "uid" : "53f0927e2eacfbbc",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/5/allure/#testresult/53f0927e2eacfbbc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489138,
+          "stop" : 1651327489390,
+          "duration" : 252
+        }
+      }, {
+        "uid" : "57bd8c91c96dae6f",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/4/allure/#testresult/57bd8c91c96dae6f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489138,
+          "stop" : 1651327489390,
+          "duration" : 252
+        }
+      }, {
+        "uid" : "248c1bb85eb1953a",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/3/allure/#testresult/248c1bb85eb1953a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489138,
+          "stop" : 1651327489390,
+          "duration" : 252
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.usefixtures('use_login')" ]
+  },
+  "source" : "f36f001bfad0b7ee.json",
+  "parameterValues" : [ "{'id': 3, 'interface': 'recharge', 'title': '充值成功-2位小数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600.22}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+}

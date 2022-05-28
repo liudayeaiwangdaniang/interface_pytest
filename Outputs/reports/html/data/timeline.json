@@ -1,0 +1,639 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "V_YARUQIU-NB3",
+    "children" : [ {
+      "name" : "13256-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case0]",
+        "uid" : "4cb40991e4ffd5cd",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489528,
+          "stop" : 1651327489863,
+          "duration" : 335
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "ff6fe902d56ee3c4",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327489874,
+          "stop" : 1651327490182,
+          "duration" : 308
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "ce5bc32fa868e368",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327495275,
+          "stop" : 1651327495390,
+          "duration" : 115
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15019738500\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"15019738500\"'}" ]
+      }, {
+        "name" : "test_user_business_3",
+        "uid" : "c201b7e977467410",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327511579,
+          "stop" : 1651327511686,
+          "duration" : 107
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_recharge[case2]",
+        "uid" : "f36f001bfad0b7ee",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489138,
+          "stop" : 1651327489390,
+          "duration" : 252
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'interface': 'recharge', 'title': '充值成功-2位小数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600.22}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+      }, {
+        "name" : "test_user_business_1",
+        "uid" : "dc0db6435344f092",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327511374,
+          "stop" : 1651327511471,
+          "duration" : 97
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "5d78725f0892c503",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327505851,
+          "stop" : 1651327505978,
+          "duration" : 127
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15036721807\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "dbbaaf7562f1d6cf",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327500433,
+          "stop" : 1651327500520,
+          "duration" : 87
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15019738500\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"15019738500\"'}" ]
+      }, {
+        "name" : "test_add[case2]",
+        "uid" : "afae6d07b696cffa",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488315,
+          "stop" : 1651327488403,
+          "duration" : 88
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'type': 'case', 'interface': 'add', 'title': '加标失败借款人id不是当前登录用户', 'method': 'post', 'url': '/loan/add', 'request_data': '{\"member_id\":#admin_member_id#+1,\"title\":\"借钱实现财富自由\",\"amount\":2000,\"loan_rate\":12.0,\"loan_term\":3,\"loan_date_type\":1,\"bidding_days\":5}', 'extract_data': None, 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "a9945848e18040a6",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327500542,
+          "stop" : 1651327500827,
+          "duration" : 285
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "c376c7a80d7e7ae4",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327511026,
+          "stop" : 1651327511133,
+          "duration" : 107
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15036721807\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_recharge[case3]",
+        "uid" : "d758a4c3bd192ea2",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489411,
+          "stop" : 1651327489511,
+          "duration" : 100
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 4, 'interface': 'recharge', 'title': '充值成功-会员id为空', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"amount\":600}', 'expected': '{\"code\": 1, \"msg\":\"用户id为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_recharge[case1]",
+        "uid" : "683a7538a88dd2de",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488858,
+          "stop" : 1651327489129,
+          "duration" : 271
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'interface': 'recharge', 'title': '充值成功-1位小数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600.1}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+      }, {
+        "name" : "test_add[case0]",
+        "uid" : "316a94bf621a72b0",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488089,
+          "stop" : 1651327488191,
+          "duration" : 102
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': None, 'type': 'before', 'interface': 'login', 'title': '管理员登录', 'method': 'post', 'url': 'member/login', 'request_data': '{\"mobile_phone\": \"#admin#\", \"pwd\": \"#admin_passwd#\"}', 'extract_data': '{\"admin_member_id\":\"$..id\",\"admin_token\":\"$..token\"}', 'expected': None, 'check_sql': None}" ]
+      }, {
+        "name" : "test_recharge[case0]",
+        "uid" : "41122566f2debd4e",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488598,
+          "stop" : 1651327488849,
+          "duration" : 251
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'interface': 'recharge', 'title': '充值成功-整数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+      }, {
+        "name" : "test_user_business_2",
+        "uid" : "921b067dfb3821ae",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327511478,
+          "stop" : 1651327511571,
+          "duration" : 93
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add[case1]",
+        "uid" : "83413b91d797e644",
+        "parentUid" : "ada5d343786e03aa0e9871f0342f0a03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488198,
+          "stop" : 1651327488296,
+          "duration" : 98
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'type': 'case', 'interface': 'add', 'title': '加标成功', 'method': 'post', 'url': '/loan/add', 'request_data': '{\"member_id\":\"#admin_member_id#\",\"title\":\"借钱实现财富自由\",\"amount\":2000,\"loan_rate\":12.0,\"loan_term\":3,\"loan_date_type\":1,\"bidding_days\":5}', 'extract_data': '{\"loan_id\":\"$..id\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "ada5d343786e03aa0e9871f0342f0a03"
+    }, {
+      "name" : "11348-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case0]",
+        "uid" : "f396277064ffe7b9",
+        "parentUid" : "aae70121b536e7ed19c268548c2be0a4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651331483206,
+          "stop" : 1651331483720,
+          "duration" : 514
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "f401fffec701ce10",
+        "parentUid" : "aae70121b536e7ed19c268548c2be0a4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651331484199,
+          "stop" : 1651331484637,
+          "duration" : 438
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "9919953053c807fe",
+        "parentUid" : "aae70121b536e7ed19c268548c2be0a4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651331483736,
+          "stop" : 1651331484138,
+          "duration" : 402
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      } ],
+      "uid" : "aae70121b536e7ed19c268548c2be0a4"
+    }, {
+      "name" : "10288-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case1]",
+        "uid" : "20e75c7829e4679a",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651325747425,
+          "stop" : 1651325747617,
+          "duration" : 192
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"13761340898\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"13761340898\"'}" ]
+      }, {
+        "name" : "test_register_ok[case0]",
+        "uid" : "289dd0f92aa37531",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651325736430,
+          "stop" : 1651325736741,
+          "duration" : 311
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "367207a96529dc71",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651325753287,
+          "stop" : 1651325753382,
+          "duration" : 95
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"14777384371\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "b8ee8cda8586faee",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651325742109,
+          "stop" : 1651325742390,
+          "duration" : 281
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"13761340898\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"13761340898\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "ce9c3543d6c696c2",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651325736741,
+          "stop" : 1651325737021,
+          "duration" : 280
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "22e2eaf49cd8699b",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651325747639,
+          "stop" : 1651325747928,
+          "duration" : 289
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "4808cccb7edc1083",
+        "parentUid" : "53f274f3c22b71f3e52321c8a421bcd2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651325758741,
+          "stop" : 1651325758834,
+          "duration" : 93
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"14777384371\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "53f274f3c22b71f3e52321c8a421bcd2"
+    }, {
+      "name" : "22248-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case2]",
+        "uid" : "cdfb3a1a7b215b17",
+        "parentUid" : "98552fa6b24eaeaa31860b46cdc97475",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651328991802,
+          "stop" : 1651328992180,
+          "duration" : 378
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case0]",
+        "uid" : "8ae025595532168d",
+        "parentUid" : "98552fa6b24eaeaa31860b46cdc97475",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651328990790,
+          "stop" : 1651328991249,
+          "duration" : 459
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "c8882b0aad83b75c",
+        "parentUid" : "98552fa6b24eaeaa31860b46cdc97475",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651328991259,
+          "stop" : 1651328991729,
+          "duration" : 470
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      } ],
+      "uid" : "98552fa6b24eaeaa31860b46cdc97475"
+    }, {
+      "name" : "1428-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case1]",
+        "uid" : "de77ab069b0ee89d",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327365071,
+          "stop" : 1651327365346,
+          "duration" : 275
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "6ea38d0be106579e",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327375687,
+          "stop" : 1651327375964,
+          "duration" : 277
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "d347a21e6770cc54",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327381166,
+          "stop" : 1651327381258,
+          "duration" : 92
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"13700062617\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "d14239e603b03ae7",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327370412,
+          "stop" : 1651327370521,
+          "duration" : 109
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"13869685650\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"13869685650\"'}" ]
+      }, {
+        "name" : "test_register_ok[case0]",
+        "uid" : "870a3d1c630a903b",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327364731,
+          "stop" : 1651327365062,
+          "duration" : 331
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "529d775e69d5bdce",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327375555,
+          "stop" : 1651327375659,
+          "duration" : 104
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"13869685650\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"13869685650\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "19e2601e2df0d495",
+        "parentUid" : "2d3153ed1d43b9e809824de50fc92ef5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327386458,
+          "stop" : 1651327386546,
+          "duration" : 88
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"13700062617\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "2d3153ed1d43b9e809824de50fc92ef5"
+    }, {
+      "name" : "1472-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case0]",
+        "uid" : "82bfc70e6e7876fc",
+        "parentUid" : "3ac21ac5af5fefd674eda3d9d34d1dcf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651330266572,
+          "stop" : 1651330267005,
+          "duration" : 433
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "2850a9f03bf795c1",
+        "parentUid" : "3ac21ac5af5fefd674eda3d9d34d1dcf",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651330267583,
+          "stop" : 1651330268072,
+          "duration" : 489
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "9f5aa1689f9f01fd",
+        "parentUid" : "3ac21ac5af5fefd674eda3d9d34d1dcf",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651330267047,
+          "stop" : 1651330267523,
+          "duration" : 476
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      } ],
+      "uid" : "3ac21ac5af5fefd674eda3d9d34d1dcf"
+    }, {
+      "name" : "19116-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case2]",
+        "uid" : "c1fb27cdf4e6aa32",
+        "parentUid" : "2fac07208b4750b1fd72fa82677b1bb7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651316274682,
+          "stop" : 1651316275018,
+          "duration" : 336
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case0]",
+        "uid" : "830e15eeb0628d76",
+        "parentUid" : "2fac07208b4750b1fd72fa82677b1bb7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651316273952,
+          "stop" : 1651316274304,
+          "duration" : 352
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "c541a989c763dc83",
+        "parentUid" : "2fac07208b4750b1fd72fa82677b1bb7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651316274317,
+          "stop" : 1651316274592,
+          "duration" : 275
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      } ],
+      "uid" : "2fac07208b4750b1fd72fa82677b1bb7"
+    }, {
+      "name" : "20732-MainThread",
+      "children" : [ {
+        "name" : "test_register_ok[case2]",
+        "uid" : "fbb889e200306d50",
+        "parentUid" : "945d7ed09551fed3fac94263f4a9ef0d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651328936259,
+          "stop" : 1651328936676,
+          "duration" : 417
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "a322e9a456d8d5f2",
+        "parentUid" : "945d7ed09551fed3fac94263f4a9ef0d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651328935737,
+          "stop" : 1651328936174,
+          "duration" : 437
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case0]",
+        "uid" : "cadd2d4068453312",
+        "parentUid" : "945d7ed09551fed3fac94263f4a9ef0d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651328935268,
+          "stop" : 1651328935713,
+          "duration" : 445
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      } ],
+      "uid" : "945d7ed09551fed3fac94263f4a9ef0d"
+    } ],
+    "uid" : "1830def5de92dd7ea2b2489160dcb1d8"
+  } ]
+}

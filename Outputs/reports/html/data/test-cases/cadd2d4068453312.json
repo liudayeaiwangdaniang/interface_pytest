@@ -1,0 +1,123 @@
+{
+  "uid" : "cadd2d4068453312",
+  "name" : "test_register_ok[case0]",
+  "fullName" : "TestCases.test_register.TestRegister#test_register_ok",
+  "historyId" : "d786af2b13a5d434d1c2c811b560738d",
+  "time" : {
+    "start" : 1651328935268,
+    "stop" : 1651328935713,
+    "duration" : 445
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "start_mark",
+    "time" : {
+      "start" : 1651328935267,
+      "stop" : 1651328935267,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1651328934938,
+      "stop" : 1651328935267,
+      "duration" : 329
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "start_mark::0",
+    "time" : {
+      "start" : 1651328936690,
+      "stop" : 1651328936691,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651328936711,
+      "stop" : 1651328936712,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_mark')"
+  }, {
+    "name" : "tag",
+    "value" : "P0"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_register"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegister"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "20732-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "P0", "@pytest.mark.usefixtures('start_mark')" ]
+  },
+  "source" : "cadd2d4068453312.json",
+  "parameterValues" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+}

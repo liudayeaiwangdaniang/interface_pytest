@@ -1,0 +1,122 @@
+{
+  "uid" : "62d29f79049c87eb",
+  "name" : "test_add[case0]",
+  "fullName" : "TestCases.test_add.TestAdd#test_add",
+  "historyId" : "dd50f1c1cbae17b0d2d53d0b935dcf05",
+  "time" : {
+    "start" : 1651327488089,
+    "stop" : 1651327488191,
+    "duration" : 102
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "init_envdata",
+    "time" : {
+      "start" : 1651327488084,
+      "stop" : 1651327488085,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1651327487927,
+      "stop" : 1651327488083,
+      "duration" : 156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "init_envdata::0",
+    "time" : {
+      "start" : 1651327488405,
+      "stop" : 1651327488406,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651327511692,
+      "stop" : 1651327511692,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('init_envdata')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_add"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAdd"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "13256-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_add"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': None, 'type': 'before', 'interface': 'login', 'title': '管理员登录', 'method': 'post', 'url': 'member/login', 'request_data': '{\"mobile_phone\": \"#admin#\", \"pwd\": \"#admin_passwd#\"}', 'extract_data': '{\"admin_member_id\":\"$..id\",\"admin_token\":\"$..token\"}', 'expected': None, 'check_sql': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('init_envdata')" ]
+  },
+  "source" : "62d29f79049c87eb.json",
+  "parameterValues" : [ "{'id': None, 'type': 'before', 'interface': 'login', 'title': '管理员登录', 'method': 'post', 'url': 'member/login', 'request_data': '{\"mobile_phone\": \"#admin#\", \"pwd\": \"#admin_passwd#\"}', 'extract_data': '{\"admin_member_id\":\"$..id\",\"admin_token\":\"$..token\"}', 'expected': None, 'check_sql': None}" ]
+}

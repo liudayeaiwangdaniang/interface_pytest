@@ -1,0 +1,83 @@
+1、handle_request   requests库的二次封装，产出send_request
+原码 requests.get(url,data,headers)
+hander  加上项目定制的请求头和token判断，判断是否有token 有的话请求头带上token
+url  进行基础的url和不同接口url进行拼接和从excel读取来的数据进行处理
+data 对excel读取的数据转换成python可识别的类型（字典）json=data发送后服务器会序列化为json格式，如果没有数据null转换成None
+response  返回的数据是json    用json()转换成字典
+请求方法 if elif else 判断是get、post、put、patch、delete 方法调用对应的requests
+    get:params参数 - 追加在url后面 - 查询参数
+    requests.post(url,json=data,headers=headers)
+        body - json - Content-Type:application/json
+	           data - Content-Type:application/www-from-urlencode
+
+2、handle_excel  利用openpyxl.load_workbook库的读取excel里的测试数据，产出 read_all_datas 和 close_file
+    def __init__(self,file_path,sheet_name ):
+        self.wb = load_workbook(file_path) 读取文件路径
+        self.sh = self.wb[sheet_name]      读取sheet名称
+        for item in list(self.sh.rows)[0] 读取sheet第一行（表头）
+          titles.append(item.value)       提取读取的格子里的值
+        for item in list(self.sh.rows)[1:]:  # 遍历数据行（第二行开始）
+        res = dict(zip(titles, values))  # title和每一行数据，打包成字典
+        all_datas.append(res)  # 追加到列表
+
+3、handle_db  操作pymysql库 连接数据库并操作  输出，get_one_data 查一条数据  get_all_data查所有的数据  get_count查有多少条数据
+    self.conn = pymysql.connect（参数） 建立连接
+    self.cur = self.conn.cursor()  创建游标
+    def get_one_data(self,sql):   创建操作函数
+        self.conn.commit()        数据库保持同步
+        self.cur.execute(sql)     查询操作
+        return self.cur.fetchone() 返回查询结果（一条返回字典，多条返回列表包含着字典）
+
+4、handle_config  二次封装configparser.ConfigParser库 读取配置文件内容
+    self.read(file_path,encoding="utf-8")
+    conf = HandleConfig(file_path)
+    输出conf 调用数据字符串conf.get("data","user")
+
+5、my_logger   logging.Logger库二次封装  输出 logger = MyLogger(file_name)
+    super().__init__(conf.get("log","name"),conf.get("log","level")) 设置日志名字和日志级别
+    formatter = logging.Formatter(fmt)   设置日志输出格式
+    self.addHandler(handle1)             加载输出渠道
+        logging.StreamHandler控制台输出
+        logging.FileHandler(file_dir,encoding="utf-8")  文件输出
+
+6、handle_path 利用os库对程序各个模块的路径进行封装  输出各种需要的路径
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) abs绝对路径的dirname父路径找到基本路径
+cases_dir = os.path.join(base_dir,"TestCases")  基本路径和其他路径通过join进行拼接
+
+7、handle_data  存储数据 清理数据  从配置文件和存储的数据中找到数据并进行替换excel中的标识
+class EnvData:  存储用例要使用到的数据     x.y=v动态设置类属性 setattr（x,y,v） , hasattr , getattr ,delattr
+def clear_EnvData_attrs():   清理数据
+def replace_case_by_regular(case): 从配置文件和存储的数据中找到数据并进行替换
+def replace_by_regular(data): 正则表达式进行替换
+    res = re.findall("#(.*?)#", data)  # 找标识符
+
+8、handle_phone  操作random.randint库随机生成手机号   range(0,8)
+prefix = [134,135,136,137,138,139,147,136] 创建手机号前三位列表
+index = random.randint(0,len(prefix)-1)  列表里边随机选择一个生成索引
+phone = str(prefix[index])   根据索引提取随机选择的转换成字符串生成手机号前三位
+for _ in range(0,8):  生成一个[0, 1, 2, 3, 4, 5, 6, 7]的列表
+    phone += str(random.randint(0,9)) 每生成一位数字添加到phone里边
+
+9、handle_extract_data_from_response 根据excel中extract_data数据表达式获取响应当中的值，存到环境变量
+def extract_data_from_response(extract_exprs,response_dict):
+    for key,value in extract_dict.items():
+        res = str(jsonpath.jsonpath(response_dict,value)[0])    提取响应数据
+        setattr(EnvData,key,res)  设置环境变量
+
+10、handle_rsa  利用rsa库进行加密和签名处理   拼接token前50位和时间戳和加密字符串
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

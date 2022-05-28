@@ -1,0 +1,26 @@
+豆瓣镜像源  48
+-i https://pypi.doubanio.com/simple
+
+公共使用
+    excel
+    requests
+    logger
+    ddt
+测试用例
+
+测试数据
+
+数据库地址 api.lemonban.com  账号future   密码123456
+
+输出文件：Outputs
+测试报告
+
+
+配置文件 Conf
+
+
+第一步：实现了注册用例的执行，unittest,ddt,handel_excel
+
+第二步：
+
+

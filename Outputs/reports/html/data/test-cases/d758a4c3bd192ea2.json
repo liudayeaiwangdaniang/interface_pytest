@@ -1,0 +1,169 @@
+{
+  "uid" : "d758a4c3bd192ea2",
+  "name" : "test_recharge[case3]",
+  "fullName" : "TestCases.test_recharge.TestRecharge#test_recharge",
+  "historyId" : "af33a02d8268462afcffde0a0b828ec1",
+  "time" : {
+    "start" : 1651327489411,
+    "stop" : 1651327489511,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "use_login",
+    "time" : {
+      "start" : 1651327488412,
+      "stop" : 1651327488594,
+      "duration" : 182
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1651327487927,
+      "stop" : 1651327488083,
+      "duration" : 156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "use_login::0",
+    "time" : {
+      "start" : 1651327489511,
+      "stop" : 1651327489511,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651327511692,
+      "stop" : 1651327511692,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('use_login')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_recharge"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRecharge"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "13256-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_recharge"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 4, 'interface': 'recharge', 'title': '充值成功-会员id为空', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"amount\":600}', 'expected': '{\"code\": 1, \"msg\":\"用户id为空\"}', 'check_sql': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "8738d8e0806b6a3e",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/6/allure/#testresult/8738d8e0806b6a3e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489411,
+          "stop" : 1651327489511,
+          "duration" : 100
+        }
+      }, {
+        "uid" : "c1a1406799e6fdd",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/5/allure/#testresult/c1a1406799e6fdd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489411,
+          "stop" : 1651327489511,
+          "duration" : 100
+        }
+      }, {
+        "uid" : "28a727fa091b0209",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/4/allure/#testresult/28a727fa091b0209",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489411,
+          "stop" : 1651327489511,
+          "duration" : 100
+        }
+      }, {
+        "uid" : "c9fd151b8aa8fe0e",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/3/allure/#testresult/c9fd151b8aa8fe0e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489411,
+          "stop" : 1651327489511,
+          "duration" : 100
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.usefixtures('use_login')" ]
+  },
+  "source" : "d758a4c3bd192ea2.json",
+  "parameterValues" : [ "{'id': 4, 'interface': 'recharge', 'title': '充值成功-会员id为空', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"amount\":600}', 'expected': '{\"code\": 1, \"msg\":\"用户id为空\"}', 'check_sql': None}" ]
+}

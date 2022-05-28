@@ -1,0 +1,237 @@
+{
+  "uid" : "f396277064ffe7b9",
+  "name" : "test_register_ok[case0]",
+  "fullName" : "TestCases.test_register.TestRegister#test_register_ok",
+  "historyId" : "d786af2b13a5d434d1c2c811b560738d",
+  "time" : {
+    "start" : 1651331483206,
+    "stop" : 1651331483720,
+    "duration" : 514
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "db",
+    "time" : {
+      "start" : 1651331482995,
+      "stop" : 1651331483204,
+      "duration" : 209
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_mark",
+    "time" : {
+      "start" : 1651331483204,
+      "stop" : 1651331483204,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651331484663,
+      "stop" : 1651331484663,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_mark::0",
+    "time" : {
+      "start" : 1651331484659,
+      "stop" : 1651331484660,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_mark')"
+  }, {
+    "name" : "tag",
+    "value" : "P0"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_register"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegister"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "11348-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "82bfc70e6e7876fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651330266572,
+        "stop" : 1651330267005,
+        "duration" : 433
+      }
+    }, {
+      "uid" : "8ae025595532168d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651328990790,
+        "stop" : 1651328991249,
+        "duration" : 459
+      }
+    }, {
+      "uid" : "cadd2d4068453312",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651328935268,
+        "stop" : 1651328935713,
+        "duration" : 445
+      }
+    }, {
+      "uid" : "4cb40991e4ffd5cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651327489528,
+        "stop" : 1651327489863,
+        "duration" : 335
+      }
+    }, {
+      "uid" : "870a3d1c630a903b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651327364731,
+        "stop" : 1651327365062,
+        "duration" : 331
+      }
+    }, {
+      "uid" : "289dd0f92aa37531",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651325736430,
+        "stop" : 1651325736741,
+        "duration" : 311
+      }
+    }, {
+      "uid" : "830e15eeb0628d76",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651316273952,
+        "stop" : 1651316274304,
+        "duration" : 352
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "ed5b50032df9c71d",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/6/allure/#testresult/ed5b50032df9c71d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651331483206,
+          "stop" : 1651331483720,
+          "duration" : 514
+        }
+      }, {
+        "uid" : "548374f737d60cf",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/5/allure/#testresult/548374f737d60cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651330266572,
+          "stop" : 1651330267005,
+          "duration" : 433
+        }
+      }, {
+        "uid" : "59cd768edba13e25",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/4/allure/#testresult/59cd768edba13e25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651328990790,
+          "stop" : 1651328991249,
+          "duration" : 459
+        }
+      }, {
+        "uid" : "b76aa5ae8554bf34",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/3/allure/#testresult/b76aa5ae8554bf34",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651328935268,
+          "stop" : 1651328935713,
+          "duration" : 445
+        }
+      }, {
+        "uid" : "d9e117160c48c113",
+        "reportUrl" : "http://localhost:8080/job/interface_pytest/1/allure/#testresult/d9e117160c48c113",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327364731,
+          "stop" : 1651327365062,
+          "duration" : 331
+        }
+      } ]
+    },
+    "tags" : [ "P0", "@pytest.mark.usefixtures('start_mark')" ]
+  },
+  "source" : "f396277064ffe7b9.json",
+  "parameterValues" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+}

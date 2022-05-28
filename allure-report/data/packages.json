@@ -1,0 +1,194 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "TestCases",
+    "children" : [ {
+      "name" : "test_add",
+      "children" : [ {
+        "name" : "test_add[case0]",
+        "uid" : "62d29f79049c87eb",
+        "parentUid" : "9b2ddb1805d49edcbb1e89a2ae67abf1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488089,
+          "stop" : 1651327488191,
+          "duration" : 102
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': None, 'type': 'before', 'interface': 'login', 'title': '管理员登录', 'method': 'post', 'url': 'member/login', 'request_data': '{\"mobile_phone\": \"#admin#\", \"pwd\": \"#admin_passwd#\"}', 'extract_data': '{\"admin_member_id\":\"$..id\",\"admin_token\":\"$..token\"}', 'expected': None, 'check_sql': None}" ]
+      }, {
+        "name" : "test_add[case1]",
+        "uid" : "eda0071f70cba58",
+        "parentUid" : "9b2ddb1805d49edcbb1e89a2ae67abf1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488198,
+          "stop" : 1651327488296,
+          "duration" : 98
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'type': 'case', 'interface': 'add', 'title': '加标成功', 'method': 'post', 'url': '/loan/add', 'request_data': '{\"member_id\":\"#admin_member_id#\",\"title\":\"借钱实现财富自由\",\"amount\":2000,\"loan_rate\":12.0,\"loan_term\":3,\"loan_date_type\":1,\"bidding_days\":5}', 'extract_data': '{\"loan_id\":\"$..id\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': None}" ]
+      }, {
+        "name" : "test_add[case2]",
+        "uid" : "4edb94dba2bfa427",
+        "parentUid" : "9b2ddb1805d49edcbb1e89a2ae67abf1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488315,
+          "stop" : 1651327488403,
+          "duration" : 88
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'type': 'case', 'interface': 'add', 'title': '加标失败借款人id不是当前登录用户', 'method': 'post', 'url': '/loan/add', 'request_data': '{\"member_id\":#admin_member_id#+1,\"title\":\"借钱实现财富自由\",\"amount\":2000,\"loan_rate\":12.0,\"loan_term\":3,\"loan_date_type\":1,\"bidding_days\":5}', 'extract_data': None, 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "9b2ddb1805d49edcbb1e89a2ae67abf1"
+    }, {
+      "name" : "test_recharge",
+      "children" : [ {
+        "name" : "test_recharge[case0]",
+        "uid" : "79189b07f1f76f31",
+        "parentUid" : "ee59d2d42629e6e57d34e1dc556ba5b2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488598,
+          "stop" : 1651327488849,
+          "duration" : 251
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'interface': 'recharge', 'title': '充值成功-整数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+      }, {
+        "name" : "test_recharge[case1]",
+        "uid" : "5649a804124c3adb",
+        "parentUid" : "ee59d2d42629e6e57d34e1dc556ba5b2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327488858,
+          "stop" : 1651327489129,
+          "duration" : 271
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'interface': 'recharge', 'title': '充值成功-1位小数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600.1}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+      }, {
+        "name" : "test_recharge[case2]",
+        "uid" : "d30e7472dd8956a",
+        "parentUid" : "ee59d2d42629e6e57d34e1dc556ba5b2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489138,
+          "stop" : 1651327489390,
+          "duration" : 252
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'interface': 'recharge', 'title': '充值成功-2位小数', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"member_id\":#member_id#,\"amount\":600.22}', 'expected': '{\"code\": 0, \"msg\":\"OK\",\"data\":{\"id\":#member_id#,\"leave_amount\":#money#}}', 'check_sql': 'SELECT CAST(member.leave_amount AS CHAR) as leave_amount FROM member WHERE ID=#member_id#'}" ]
+      }, {
+        "name" : "test_recharge[case3]",
+        "uid" : "7735ac86c089c3a7",
+        "parentUid" : "ee59d2d42629e6e57d34e1dc556ba5b2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489411,
+          "stop" : 1651327489511,
+          "duration" : 100
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 4, 'interface': 'recharge', 'title': '充值成功-会员id为空', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"amount\":600}', 'expected': '{\"code\": 1, \"msg\":\"用户id为空\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "ee59d2d42629e6e57d34e1dc556ba5b2"
+    }, {
+      "name" : "test_register",
+      "children" : [ {
+        "name" : "test_register_ok[case0]",
+        "uid" : "1a00af2403da5ee8",
+        "parentUid" : "06190ac8fb5eece3fe043647e35c7b7f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651327489528,
+          "stop" : 1651327489863,
+          "duration" : 335
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 1, 'title': '注册成功-带注册名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1,\"reg_name\":\"ming123456\"}', 'expected': '{\"code\": 0, \"msg\":\"OK\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+      }, {
+        "name" : "test_register_ok[case1]",
+        "uid" : "2990244c6d3b19b",
+        "parentUid" : "06190ac8fb5eece3fe043647e35c7b7f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327500433,
+          "stop" : 1651327500520,
+          "duration" : 87
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15019738500\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"15019738500\"'}" ]
+      }, {
+        "name" : "test_register_ok[case2]",
+        "uid" : "c14d186609c3d6dc",
+        "parentUid" : "06190ac8fb5eece3fe043647e35c7b7f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327511026,
+          "stop" : 1651327511133,
+          "duration" : 107
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15036721807\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "06190ac8fb5eece3fe043647e35c7b7f"
+    } ],
+    "uid" : "1dd5dae00c58193b69825e57e00d160e"
+  }, {
+    "name" : "TestCases_Business.test_user_business",
+    "children" : [ {
+      "name" : "test_user_business_1",
+      "uid" : "bf6175800e970916",
+      "parentUid" : "8cf6243607e7b10e51668e6235343546",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651327511374,
+        "stop" : 1651327511471,
+        "duration" : 97
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_user_business_2",
+      "uid" : "fc9ff6429f85e58f",
+      "parentUid" : "8cf6243607e7b10e51668e6235343546",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651327511478,
+        "stop" : 1651327511571,
+        "duration" : 93
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_user_business_3",
+      "uid" : "53de49fb0e056b18",
+      "parentUid" : "8cf6243607e7b10e51668e6235343546",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651327511579,
+        "stop" : 1651327511686,
+        "duration" : 107
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "TestCases_Business.test_user_business"
+  } ]
+}

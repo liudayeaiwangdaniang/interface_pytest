@@ -1,0 +1,125 @@
+{
+  "uid" : "a322e9a456d8d5f2",
+  "name" : "test_register_ok[case1]",
+  "fullName" : "TestCases.test_register.TestRegister#test_register_ok",
+  "historyId" : "12cf2168d3a3ccfa3a271b50c0792fe1",
+  "time" : {
+    "start" : 1651328935737,
+    "stop" : 1651328936174,
+    "duration" : 437
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'OK' == '密码为空'\n  - 密码为空\n  + OK",
+  "statusTrace" : "self = <TestCases.test_register.TestRegister object at 0x000001DFAF7E6F98>\ncase = {'check_sql': 'select * from member where mobile_phone=\"14736920729\"', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'id': 2, 'method': 'post', ...}\ndb = <Common.handle_db.HandleDB object at 0x000001DFAFA1C0F0>\n\n    @pytest.mark.parametrize(\"case\",cases)\n    def test_register_ok(self,case,db):\n        logger.info(\"执行用例{}：{}\".format(case[\"id\"],case[\"title\"]))\n    \n    # 替换 - 动态\n        # request_data里的 #phone# 替换成 new_phone\n        # check_sql里的 #phone# 替换成 new_phone\n        if case[\"request_data\"].find(\"#phone#\") != -1: # != -1 说明能找到下标\n            new_phone = get_new_phone()\n            case = replace_mark_with_data(case,\"#phone#\",new_phone)\n    \n    # 步骤 测试数据-发起请求\n        response = send_requsets(case[\"method\"],case[\"url\"],case[\"request_data\"])\n    \n    # 期望结果，从字符串转换为字典\n        expected = eval(case[\"expected\"])\n    \n    # 断言 -code == 0  msg == ok\n        logger.info(\"用例的期望结果为：{}\".format(case[\"expected\"]))\n        try:\n            assert response.json()[\"code\"] == expected[\"code\"]\n>           assert response.json()[\"msg\"] == expected[\"msg\"]\nE           AssertionError: assert 'OK' == '密码为空'\nE             - 密码为空\nE             + OK\n\nTestCases\\test_register.py:57: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "start_mark",
+    "time" : {
+      "start" : 1651328935267,
+      "stop" : 1651328935267,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1651328934938,
+      "stop" : 1651328935267,
+      "duration" : 329
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "start_mark::0",
+    "time" : {
+      "start" : 1651328936690,
+      "stop" : 1651328936691,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651328936711,
+      "stop" : 1651328936712,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_mark')"
+  }, {
+    "name" : "tag",
+    "value" : "P0"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_register"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRegister"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "20732-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "P0", "@pytest.mark.usefixtures('start_mark')" ]
+  },
+  "source" : "a322e9a456d8d5f2.json",
+  "parameterValues" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"#phone#\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"#phone#\"'}" ]
+}

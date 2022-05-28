@@ -1,0 +1,36 @@
+[ {
+  "buildOrder" : 6,
+  "reportUrl" : "http://localhost:8080/job/interface_pytest/6/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 3996548
+  }
+}, {
+  "buildOrder" : 5,
+  "reportUrl" : "http://localhost:8080/job/interface_pytest/5/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 2779983
+  }
+}, {
+  "buildOrder" : 4,
+  "reportUrl" : "http://localhost:8080/job/interface_pytest/4/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 1504091
+  }
+}, {
+  "buildOrder" : 3,
+  "reportUrl" : "http://localhost:8080/job/interface_pytest/3/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 1448587
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "http://localhost:8080/job/interface_pytest/1/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 21815
+  }
+} ]

@@ -1,0 +1,43 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 2 == 0\n  +2\n  -0",
+      "children" : [ {
+        "name" : "test_register_ok[case1]",
+        "uid" : "2990244c6d3b19b",
+        "parentUid" : "835c8a9f3c46aaffd7f29e6a191168ac",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327500433,
+          "stop" : 1651327500520,
+          "duration" : 87
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 2, 'title': '注册成功-不带用户名', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15019738500\", \"pwd\": \"1234567890\",\"type\":1}', 'expected': '{\"code\": 0, \"msg\":\"密码为空\"}', 'check_sql': 'select * from member where mobile_phone=\"15019738500\"'}" ]
+      } ],
+      "uid" : "835c8a9f3c46aaffd7f29e6a191168ac"
+    }, {
+      "name" : "AssertionError: assert '密码为空' == '手机号为空'\n  - 手机号为空\n  + 密码为空",
+      "children" : [ {
+        "name" : "test_register_ok[case2]",
+        "uid" : "c14d186609c3d6dc",
+        "parentUid" : "ed8ad857fdb834b5192b5aeda56b79d3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651327511026,
+          "stop" : 1651327511133,
+          "duration" : 107
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'id': 3, 'title': '不输入手机号', 'method': 'post', 'url': 'member/register', 'request_data': '{\"mobile_phone\": \"15036721807\", \"type\":1}', 'expected': '{\"code\": 1, \"msg\":\"手机号为空\"}', 'check_sql': None}" ]
+      } ],
+      "uid" : "ed8ad857fdb834b5192b5aeda56b79d3"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

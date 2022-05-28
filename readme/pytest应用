@@ -1,0 +1,67 @@
+unittest
+ --写用例 -TestCase
+ --收集报告 -TestLoader.discover()
+ --生成报告 -HtmlTestRunner
+pytest
+  -- 能够运行unittest用例
+nose
+behave - 行为驱动
+
+共同点
+    1. 框架测试  - 通过python代码来写测试用例，收集用例，运行用例，生成报告
+
+1.编写用例
+    unittest：继承TestCase
+    pytest：函数/类里边的方法 -- 用例名称必须以test_开头，如果用例在类当中，类名必须以Test开头。
+
+    前置后置：
+    unittest：setup/teardown   setupClass，tearDownClass
+    pytest：
+        方案一：沿用了unittest的风格
+            1.用例级别，setup ，teardpwn    -- 类和类外的用例都可以使用
+            2.类级别;setup_class  teardown_class   --类专用
+                 @classmethod
+                 def setup_class(cls):
+                  print("类前置")
+            3.模块级别： setup_module  teardown_module
+
+        方案二：fixture
+    断言：
+    unittest: self.assertXXXXX()
+    pytest:   assert  表达式
+2.收集用例
+    用例分散在多个文件当中
+    unittest:TestLoader.discover(目录) - 收集到套件当中，run方法去执行。
+    pytest：
+        不需要写任何代码去收集用例  -- 自动收集/发现用例的方式。
+        执行用例的时候会自动收集：
+        pytest命令行：pytest[参数]
+
+    如何自动收集用例的？
+    1、目录 - 从那个目录下开始搜索用例
+        rootdir：pytest 命令在那个目录下运行，就以那个目录为rootdir
+    2、文件名 - 符合test_*.py或者*_test.py条件的文件名，它里边是会有用例
+    3、函数/类下方法 - 函数名以test_开头
+                    - 以Test开头（不含__init__）的类下的test_开头的方法
+
+    收集并运行用例
+    方式一：
+        命令行： pytest -s -v 控制台显示详细的用例执行情况
+    方式二：
+        python文件：pytest.main()
+
+    执行顺序？？？:
+    1、文件名：ASCII 先后顺序
+    2、文件内部：从上到下按顺序遍历
+
+3、生成测试报告：
+    unittest：HtmlTestRunner ， BeautifulReport
+    pytest: html -插件
+            html插件安装命令: pip install pytest-html
+
+
+        有非常多的插件。alluer -插件  重运行-插件
+            allure - 插件
+            安装命令：pip install allure-pytest
+            allure命令行下载地址：https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
+官方文档 https：//docs.pytest.org/en/stable/

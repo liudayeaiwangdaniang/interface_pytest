@@ -1,0 +1,122 @@
+{
+  "uid" : "7735ac86c089c3a7",
+  "name" : "test_recharge[case3]",
+  "fullName" : "TestCases.test_recharge.TestRecharge#test_recharge",
+  "historyId" : "af33a02d8268462afcffde0a0b828ec1",
+  "time" : {
+    "start" : 1651327489411,
+    "stop" : 1651327489511,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "use_login",
+    "time" : {
+      "start" : 1651327488412,
+      "stop" : 1651327488594,
+      "duration" : 182
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1651327487927,
+      "stop" : 1651327488083,
+      "duration" : 156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "use_login::0",
+    "time" : {
+      "start" : 1651327489511,
+      "stop" : 1651327489511,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db::0",
+    "time" : {
+      "start" : 1651327511692,
+      "stop" : 1651327511692,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('use_login')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_recharge"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRecharge"
+  }, {
+    "name" : "host",
+    "value" : "V_YARUQIU-NB3"
+  }, {
+    "name" : "thread",
+    "value" : "13256-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_recharge"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': 4, 'interface': 'recharge', 'title': '充值成功-会员id为空', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"amount\":600}', 'expected': '{\"code\": 1, \"msg\":\"用户id为空\"}', 'check_sql': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('use_login')" ]
+  },
+  "source" : "7735ac86c089c3a7.json",
+  "parameterValues" : [ "{'id': 4, 'interface': 'recharge', 'title': '充值成功-会员id为空', 'method': 'post', 'url': 'member/recharge', 'request_data': '{\"amount\":600}', 'expected': '{\"code\": 1, \"msg\":\"用户id为空\"}', 'check_sql': None}" ]
+}
